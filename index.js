@@ -2,7 +2,6 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 
 const express = require("express");
-const router = express.Router();
 const app = express();
 
 const todo = require("./app/todo.js");
@@ -20,10 +19,6 @@ app.use(express.urlencoded({ extended: true }));
 // routes
 app.post("/tasks", todo.create);
 app.get("/tasks", todo.getAll);
-app.get("/tasks/:id", todo.getOne);
-app.put("/tasks/:id", todo.update);
-app.delete("/tasks/:id", todo.delete);
-
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8082;
