@@ -6,7 +6,7 @@ db.serialize(() => {
     db.run(`CREATE TABLE IF NOT EXISTS tasks (
                 id INTEGER PRIMARY KEY,
                 title TEXT,
-                description TEXT
+                date TEXT
             )`, (err) => {
                     if (err) {
                         console.error(err.message);

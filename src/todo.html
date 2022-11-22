@@ -12,6 +12,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" type="imagem/png" href="./assets/logo.png" />
+    <script src="js/requests.js"></script>
+
+    <script></script>
 </head>
 <body>
     <!-- Aqui vai a navbar da página-->
@@ -31,14 +34,18 @@
         <div class="addTarefaButton">
             <button type="button" class="btn btn-primary buttonStyle" data-bs-toggle="modal" data-bs-target="#novaTarefaModal">Adicionar tarefa</button>
         </div>
+
+        <div id="TarefaContainer">
+            
+        </div>
         
-        <!-- Aqui vão os cartões das tarefas-->
+        <!-- Aqui vão os cartões das tarefas
         <div class="cardDiv">
-            <!-- Cada div de tarefa contém o card da tarefa e o botão de remover-->
+            Cada div de tarefa contém o card da tarefa e o botão de remover
             <div class="row">
-                <div class="card col-11">            
+                <div class="card col-11">
                     <div class="card-body">
-                        <div class="row justify-content-between"> <!-- https://getbootstrap.com/docs/5.2/layout/columns/ -->
+                        <div class="row justify-content-between"> https://getbootstrap.com/docs/5.2/layout/columns/
                             <div class="col-6">
                                 Tarefa 1
                             </div>
@@ -55,32 +62,7 @@
                     </span>
                 </a>
             </div>
-        </div>
-
-        <!-- Aqui vão os cartões das tarefas-->
-        <div class="cardDiv">
-            <!-- Cada div de tarefa contém o card da tarefa e o botão de remover-->
-            <div class="row">
-                <div class="card col-11">            
-                    <div class="card-body">
-                        <div class="row justify-content-between">
-                            <div class="col-6">
-                                Tarefa 2
-                            </div>
-                            <div class="col-2">
-                                04/11/2022
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <a class="col-1 deleteIconButton" href="" data-bs-toggle="modal" data-bs-target="#excluirTarefaModal">
-                    <span class="material-symbols-outlined">
-                        do_not_disturb_on
-                    </span>
-                </a>
-            </div>
-        </div>
+        </div> -->
     </div>
 
     <!-- Aqui vai o modal de criar tarefa-->
@@ -100,14 +82,14 @@
                         <label for="floatingTitulo">Título</label>
                       </div>
                       <div class="form-floating">
-                        <input type="date" class="form-control" id="floatingData" placeholder="data de conclusao">
-                        <label for="floatingData">Data de Conclusão</label>
+                        <input type="date" class="form-control" id="floatingDate" placeholder="data de conclusao">
+                        <label for="floatingDate">Data de Conclusão</label>
                       </div>
 
                 </div>
                 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary buttonStyle">Registrar</button>
+                    <button type="button" class="btn btn-primary buttonStyle" onclick="createTask()">Registrar</button>
                 </div>
             
             </div>
